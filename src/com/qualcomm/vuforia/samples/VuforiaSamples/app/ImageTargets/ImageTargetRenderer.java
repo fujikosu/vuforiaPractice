@@ -104,7 +104,7 @@ public class ImageTargetRenderer implements GLSurfaceView.Renderer
     // Called when the surface changed size.
     @Override
     public void onSurfaceChanged(GL10 gl, int width, int height)
-    {
+    {	
         Log.d(LOGTAG, "GLRenderer.onSurfaceChanged");
         
         // Call Vuforia function to handle render surface size changes:
@@ -208,6 +208,7 @@ public class ImageTargetRenderer implements GLSurfaceView.Renderer
             {
                 Matrix.translateM(modelViewMatrix, 0, 0.0f, 0.0f,
                     OBJECT_SCALE_FLOAT);
+                Matrix.rotateM(modelViewMatrix, 0, 90.0f, 1.0f, 1.0f, 0);
                 Matrix.scaleM(modelViewMatrix, 0, OBJECT_SCALE_FLOAT,
                     OBJECT_SCALE_FLOAT, OBJECT_SCALE_FLOAT);
             } else

@@ -101,7 +101,7 @@ public class ImageTargets extends Activity implements SampleApplicationControl,
         startLoadingAnimation();
         mDatasetStrings.add("StonesAndChips.xml");
         mDatasetStrings.add("Tarmac.xml");
-        mDatasetStrings.add("try.xml");
+        //mDatasetStrings.add("try.xml");
         
         vuforiaAppSession
             .initAR(this, ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -167,8 +167,8 @@ public class ImageTargets extends Activity implements SampleApplicationControl,
             getAssets()));
         mTextures.add(Texture.loadTextureFromApk("ImageTargets/Buildings.jpeg",
             getAssets()));
-        mTextures.add(Texture.loadTextureFromApk("try.jpg",
-                getAssets()));
+        /*mTextures.add(Texture.loadTextureFromApk("try.jpg",
+                getAssets()));*/
     }
     
     
@@ -284,7 +284,7 @@ public class ImageTargets extends Activity implements SampleApplicationControl,
         
         mGlView = new SampleApplicationGLView(this);
         mGlView.init(translucent, depthSize, stencilSize);
-        
+       
         mRenderer = new ImageTargetRenderer(this, vuforiaAppSession);
         mRenderer.setTextures(mTextures);
         mGlView.setRenderer(mRenderer);
@@ -600,7 +600,7 @@ public class ImageTargets extends Activity implements SampleApplicationControl,
         
         group.addRadioItem("Stones & Chips", mStartDatasetsIndex, true);
         group.addRadioItem("Tarmac", mStartDatasetsIndex + 1, false);
-        group.addRadioItem("try", mStartDatasetsIndex + 2, true);
+        //group.addRadioItem("try", mStartDatasetsIndex + 2, true);
         
         mSampleAppMenu.attachMenu();
     }
