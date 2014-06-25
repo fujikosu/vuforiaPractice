@@ -55,4 +55,6 @@
         
     <string name="splash_screen_description">Vuforia Splash</string>
     
+    <string name="honeylabAR">HoneylabAR</string>
+    
 </resources>

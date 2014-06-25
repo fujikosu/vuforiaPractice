@@ -12,7 +12,10 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
+
 
 import com.qualcomm.vuforia.samples.VuforiaSamples.R;
 
@@ -38,7 +41,20 @@ public class ActivityLauncher extends ListActivity
             WindowManager.LayoutParams.FLAG_FULLSCREEN);
         
         setContentView(R.layout.activities_list);
+        
         setListAdapter(adapter);
+        /*
+        Button playButton = (Button)findViewById(R.id.button);
+		playButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+			    Intent intent = new Intent(getApplicationContext(), AboutScreen.class);
+                intent.putExtra("ACTIVITY_TO_LAUNCH",
+                        "app.ImageTargets.ImageTargets");
+                    intent.putExtra("ABOUT_TEXT", "ImageTargets/IT_about.html");
+			}
+		});*/
     }
     
     
